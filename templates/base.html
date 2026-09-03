@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}GovDesk{% endblock %}</title>
+  <style>
+    :root { color-scheme: light; --azul: #174ea6; --fundo: #f4f7fb; --borda: #d9e2ef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #1f2937; background: var(--fundo); }
+    header { background: var(--azul); color: white; }
+    nav, main { width: min(960px, calc(100% - 32px)); margin: auto; }
+    nav { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    nav a { color: white; text-decoration: none; margin-left: 18px; }
+    nav a:hover { text-decoration: underline; }
+    main { margin-top: 32px; margin-bottom: 32px; padding: 28px; background: white; border: 1px solid var(--borda); border-radius: 12px; box-shadow: 0 6px 24px rgba(23, 78, 166, .08); }
+    h1 { color: var(--azul); margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px 14px; border: 1px solid var(--borda); text-align: left; }
+    th { background: #eaf1fb; color: #123b75; }
+    tr:nth-child(even) { background: #f8fafc; }
+    .status { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #eaf1fb; text-transform: capitalize; }
+    footer { text-align: center; color: #64748b; padding: 8px 16px 28px; }
+    @media (max-width: 600px) { nav { align-items: flex-start; padding: 16px 0; } main { padding: 20px; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <strong>GovDesk</strong>
+      <div><a href="{{ url_for('index') }}">Chamados</a><a href="{{ url_for('sobre') }}">Sobre</a></div>
+    </nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>GovDesk — Gestão de chamados de TI</footer>
+</body>
+</html>

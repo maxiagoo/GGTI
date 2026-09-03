@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Sobre | GovDesk{% endblock %}
+{% block content %}
+  <h1>Sobre o projeto</h1>
+  <p>O GovDesk é um esqueleto de sistema para organizar chamados de suporte de TI.</p>
+  <h2>Equipe e papéis</h2>
+  <table>
+    <thead><tr><th>Integrante</th><th>Papel</th></tr></thead>
+    <tbody>
+      {% for integrante in equipe %}
+      <tr><td>{{ integrante.nome }}</td><td>{{ integrante.papel }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

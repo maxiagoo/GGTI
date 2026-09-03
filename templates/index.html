@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Chamados | GovDesk{% endblock %}
+{% block content %}
+  <h1>Chamados de TI</h1>
+  <p>Total de chamados cadastrados: <strong>{{ total }}</strong></p>
+  <table>
+    <thead><tr><th>ID</th><th>Título</th><th>Status</th></tr></thead>
+    <tbody>
+      {% for c in chamados %}
+      <tr><td>{{ c.id }}</td><td>{{ c.titulo }}</td><td><span class="status">{{ c.status }}</span></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
