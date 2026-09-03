@@ -13,6 +13,10 @@ python app.py
 
 Acesse `http://localhost:8080` no navegador.
 
+Repositório: https://github.com/maxiagoo/GGTI
+
+Kanban: https://trello.com/b/1pn9Wyg3/govdesk-semana-1
+
 ## Estrutura
 
 ```text
@@ -45,9 +49,10 @@ Crie no Trello as colunas `Backlog`, `Em Andamento` e `Concluído`, com pelo men
 ## Checklist da atividade
 
 - [x] Projeto Python/Flask criado
+- [x] Projeto executado e validado localmente no VS Code
 - [x] Esqueleto mínimo do sistema implementado
 - [x] Páginas de chamados e sobre criadas
 - [x] Definir e registrar o integrante e seus papéis
-- [ ] Criar o board Kanban no Trello
-- [ ] Criar/conectar o repositório no GitHub e fazer os commits
-- [ ] Compartilhar os links solicitados com o professor
+- [x] Criar o board Kanban no Trello
+- [x] Criar/conectar o repositório no GitHub e fazer os commits
+- [x] Links do GitHub e do Trello registrados para compartilhamento
